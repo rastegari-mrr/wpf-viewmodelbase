@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<CodeSnippets  
+    xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">  
+    <CodeSnippet Format="1.0.0">  
+        <Header>  
+            <Title>OnPropertyChanged</Title>  
+        </Header>      
+      <Snippet>
+          <SnippetTypes>
+            <SnippetType>SurroundsWith</SnippetType>
+            <SnippetType>Expansion</SnippetType>
+          </SnippetTypes>
+          <Declarations>
+            <Literal>
+              <ID>TYPE</ID>
+              <ToolTip>Property type</ToolTip>
+              <Default>int</Default>
+            </Literal>
+            <Literal>
+              <ID>NAME1</ID>
+              <ToolTip>Property name</ToolTip>
+              <Default>MyProperty</Default>
+            </Literal>
+          </Declarations>
+            <Code Language="CSharp">  
+                <![CDATA[private $TYPE$ _$NAME1$;
+public $TYPE$ $NAME1$
+{
+    get => _$NAME1$; 
+    set => SetProperty(ref _$NAME1$, value);    
+}]]>  
+            </Code>  
+        </Snippet>  
+    </CodeSnippet>  
+</CodeSnippets> 
